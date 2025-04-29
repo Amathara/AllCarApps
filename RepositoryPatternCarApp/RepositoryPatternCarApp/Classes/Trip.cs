@@ -17,14 +17,15 @@ namespace RepositoryPatternCarApp.Classes
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
 
-        //public Trip(string carRegnr, double distance, DateTime date, TimeSpan startTime, TimeSpan endTime)
-        //{
-        //    CarRegNr = carRegnr;
-        //    Distance = distance;
-        //    Date = date;
-        //    StartTime = startTime;
-        //    EndTime = endTime;
-        //}
+        public Trip() { }
+        public Trip(string carRegnr, double distance, DateTime date, TimeSpan startTime, TimeSpan endTime)
+        {
+            CarRegNr = carRegnr;
+            Distance = distance;
+            Date = date;
+            StartTime = startTime;
+            EndTime = endTime;
+        }
         public string ToString()
         {
             return $"{CarRegNr},{Distance},{Date},{StartTime},{EndTime}";

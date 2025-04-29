@@ -6,7 +6,7 @@ namespace TestCarApp
     public sealed class Test1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AddCar_SavesCorrectly()
         {
         }
     }

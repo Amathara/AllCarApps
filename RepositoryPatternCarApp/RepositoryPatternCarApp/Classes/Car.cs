@@ -16,17 +16,18 @@ namespace RepositoryPatternCarApp.Classes
         public string Color { get; set; }
         public string LicensePlate { get; set; }
         public string FuelType { get; set; }
-       // public List Trips { get; set; }
+        // public List Trips { get; set; }
 
-        //public Car(string brand, string model, int year, string color, string licensePlate, string fuelType)
-        //{
-        //    Brand = brand;
-        //    Model = model;
-        //    Year = year;
-        //    Color = color;
-        //    LicensePlate = licensePlate;
-        //    FuelType = fuelType;
-        //}
+        public Car () { } // To be able to make FromString.
+        public Car(string brand, string model, int year, string color, string licensePlate, string fuelType) 
+        {
+            Brand = brand;
+            Model = model;
+            Year = year;
+            Color = color;
+            LicensePlate = licensePlate;
+            FuelType = fuelType;
+        }
 
         public string ToString()
         {
@@ -46,6 +47,7 @@ namespace RepositoryPatternCarApp.Classes
                 FuelType = parts [5]
                 //Trips = parts [6]
             };
+
         }
     }
 }
