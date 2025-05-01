@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:WpfCarApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="CornflowerBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
 
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Background="CornflowerBlue" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Add" Width="75" Height="30" Margin="0,0,5,0" Background="AliceBlue"
                     Command="{Binding AddCommand}"/>
             <Button Content="Delete" Width="75" Height="30" Margin="0,0,5,0" Background="AliceBlue"
@@ -21,14 +21,14 @@
             <Button Content="Save" Width="75" Height="30" Margin="0,0,5,0" Background="AliceBlue"
                     Command="{Binding SaveCommand}"/>
         </StackPanel>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Background="White"> 
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*"/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
-            <DataGrid
+            <DataGrid Background="AliceBlue"
                 ItemsSource="{Binding Cars}"
                 SelectedItem="{Binding SelectedCar}"
                 CanUserAddRows="False" 
@@ -36,22 +36,23 @@
                 AutoGenerateColumns="False">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" Width="5*"/>
-                    <DataGridTextColumn Header="Model" Binding="{Binding Model}" Width="3*"/>
-                    <DataGridTextColumn Header="Year" Binding="{Binding Year}" Width="3*"/>
-                    <DataGridTextColumn Header="LicensePlate" Binding="{Binding LicensePlate}" Width="2*"/>
+                    
+                    <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" Width="4*"/>
+                    <DataGridTextColumn Header="Model" Binding="{Binding Model}" Width="4*"/>
+                    <DataGridTextColumn Header="Year" Binding="{Binding Year}" Width="2*"/>
+                    <DataGridTextColumn Header="LicensePlate" Binding="{Binding LicensePlate}" Width="3*"/>
                 </DataGrid.Columns>
             </DataGrid>
 
-            <StackPanel Grid.Column="1">
+            <StackPanel Grid.Column="1"> 
                 <Label Content="Brand" Background="AliceBlue"/>
-                <TextBox Margin="5,0,5,15" Text="{Binding SelectedCar.Brand, UpdateSourceTrigger=PropertyChanged}" Background="Honeydew" CaretBrush="AntiqueWhite"/>
+                <TextBox Margin="5,0,5,15" Text="{Binding SelectedCar.Brand, UpdateSourceTrigger=PropertyChanged}" Background="GhostWhite" CaretBrush="AntiqueWhite"/>
                 <Label Content="Model" Background="AliceBlue"/>
-                <TextBox Margin="5,0,5,15" Text="{Binding SelectedCar.Model, UpdateSourceTrigger=PropertyChanged}" Background="Honeydew"/>
+                <TextBox Margin="5,0,5,15" Text="{Binding SelectedCar.Model, UpdateSourceTrigger=PropertyChanged}" Background="White"/>
                 <Label Content="Year" Background="AliceBlue"/>
-                <TextBox Margin="5,0,5,15" Text="{Binding SelectedCar.Year, UpdateSourceTrigger=PropertyChanged}" Background="Honeydew" CaretBrush="AntiqueWhite"/>
+                <TextBox Margin="5,0,5,15" Text="{Binding SelectedCar.Year, UpdateSourceTrigger=PropertyChanged}" Background="White" CaretBrush="AntiqueWhite"/>
                 <Label Content="LicensePlate" Background="AliceBlue"/>
-                <TextBox Margin="5,0,5,15" Text="{Binding SelectedCar.LicensePlate, UpdateSourceTrigger=PropertyChanged}" Background="Honeydew"/>
+                <TextBox Margin="5,0,5,15" Text="{Binding SelectedCar.LicensePlate, UpdateSourceTrigger=PropertyChanged}" Background="White"/>
             </StackPanel>
         </Grid>
       

@@ -51,8 +51,9 @@ namespace WpfCarApp.ViewModel
             {
                 Cars.Add(new Car
                 {
-                    Brand = "brand",
-                    Model = "model",
+                    Brand = "Insert Brand",
+                    Model = "Insert Model",
+                    Year = 0,
                     LicensePlate = "EX00000"
 
                 });
