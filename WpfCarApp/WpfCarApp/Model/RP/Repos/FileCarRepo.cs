@@ -5,8 +5,12 @@ using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
-using RepositoryPatternCarApp.Classes;
-namespace RepositoryPatternCarApp.RepositoryPattern.Repositories
+using WpfCarApp.Model;
+using WpfCarApp.Model.Classes;
+using WpfCarApp.Model.RP.Interfaces;
+
+
+namespace WpfCarApp.Model.RP
 {
     internal class FileCarRepo : ICarRepo
     {
@@ -84,6 +88,10 @@ namespace RepositoryPatternCarApp.RepositoryPattern.Repositories
             {
                 Console.WriteLine($"There was an error writing to file: {ex.Message}");
             }
+        }
+        public void UpdateAllCars(IEnumerable<Car> cars)
+        {
+            RewriteFile(cars.ToList());
         }
     }
 }
