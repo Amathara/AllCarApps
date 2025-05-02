@@ -28,7 +28,7 @@ namespace WpfCarApp.ViewModel
             public MainWindowViewModel()
             {
                 Cars = new ObservableCollection<Car>();
-            _carRepo = new FileCarRepo("Car.txt");//Enable it to save files.
+            _carRepo = new FileCarRepo("Car.txt");//Enable it to do stuff with the car text file.
             LoadCars(); // Load cars on startup
             }
 
